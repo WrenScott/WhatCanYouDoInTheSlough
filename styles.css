@@ -1,0 +1,72 @@
+ * {
+     margin: 0px;
+     padding: 0px;
+     font-family: Georgia, serif;
+ }
+
+ html {
+     box-sizing: border-box;
+ }
+
+ *,
+ *::before,
+ *::after {
+     box-sizing: inherit;
+ }
+
+ .app-container {
+     display: grid;
+     grid-template-columns: 1fr 1fr 250px;
+     grid-template-rows: 50px 1fr 1fr;
+     height: 100vh;
+     overflow: hidden;
+ }
+
+ .navbar {
+     display: flex;
+     font-size: 20px;
+     color: #e1e8ee;
+     border: 1.5px solid #7291ab;
+     background-color: #0c3c60;
+     grid-column: 1 / span 4;
+     grid-row: 1;
+ }
+
+ .navbar div {
+     padding: 20px;
+ }
+
+ .logo {
+     width: 50px;
+     height: 50px;
+     padding: 2px;
+
+ }
+
+ .spacer {
+     flex: 1;
+ }
+
+ #legend {
+     cursor: pointer;
+ }
+
+ #map {
+     grid-column: 1 / 4;
+     grid-row: 2 / 4;
+     z-index: 1;
+ }
+
+ #right-pane {
+     background: url(assets/CSWC_Interactive_Map_Legend.svg) no-repeat;
+     background-size: contain;
+     grid-column: 4;
+     grid-row: 2 / span 4;
+     width: 0px;
+     z-index: 2;
+     transition: all 0.5s ease-out;
+ }
+
+ #right-pane.active {
+     width: 250px;
+ }
