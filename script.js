@@ -66,7 +66,8 @@ const Water_Features = L.esri.featureLayer({
 
 // Feature Layer for stream centerlines within the CSW
 const Stream_Centerlines_CSW = L.esri.featureLayer({
-    url: streamCrtlnURL
+    url: streamCrtlnURL,
+    pane: 'water'
 }).addTo(map);
 
 // Feature layer for city boundaries that intersect the CSW
