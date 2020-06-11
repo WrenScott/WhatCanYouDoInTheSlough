@@ -41,9 +41,13 @@ const Columbia_Slough_Watershed = L.esri.featureLayer({
     url: cswURL
 }).addTo(map);
 
+// Create pane for ORCA_CSW
+map.createPane('orca');
+
 // Feature layer for Outdoor Recreation and Conservation Areas (ORCA) that are within the CSW 
 const ORCA_CSW = L.esri.featureLayer({
-    url: orcaURL
+    url: orcaURL,
+    pane: 'orca'
 }).addTo(map);
 
 // Popup for ORCA 
