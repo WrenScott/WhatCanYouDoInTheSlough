@@ -55,9 +55,13 @@ const ORCA_popUp = ORCA_CSW.bindPopup(function (evt) {
     return L.Util.template('<b>{SITENAME}</b><hr><p>This site is a {UNITTYPE} owned by {OWNLEV3}.</p>', evt.feature.properties);
 });
 
+// Create pane for water features
+map.createPane('water');
+
 // Feature layer for water features
 const Water_Features = L.esri.featureLayer({
-    url: waterFeaturesURL
+    url: waterFeaturesURL,
+    pane: 'water'
 }).addTo(map);
 
 // Feature Layer for stream centerlines within the CSW
@@ -88,13 +92,17 @@ map.createPane('trails');
 // Feature layer for trais within the CSW
 const Trails_CSW = L.esri.featureLayer({
     url: trailsURL,
-    pane: 'trails'
+    pane: 'trails',
+    maxZoom: 19,
+    minZoom: 13
 }).addTo(map);
 
 // Feature layer for Columbia Slough Water Trail
 const CS_waterTrail = L.esri.featureLayer({
     url: cswtURL,
-    pane: 'trails'
+    pane: 'trails',
+    maxZoom: 19,
+    minZoom: 13
 }).addTo(map);
 
 // Creating custom marker icon for trailheads
