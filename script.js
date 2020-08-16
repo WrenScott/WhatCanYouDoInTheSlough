@@ -192,5 +192,5 @@ function toggleSidePane() {
 
 // Welcome to the webmap alert message
 function welcomeMessage(){
-    alert("The Columbia Slough is a narow waterway in the floodplane of the Columbia River, about 19 miles long. Within its watershed there are many recreation oppertunities. This map aims to communicate all there is to offer in the Slough. Pan, zoom and select features for more information.");
+    alert("The Columbia Slough is a narow waterway in the floodplain of the Columbia River, about 19 miles long. Within its watershed there are many recreation oppertunities. This map aims to communicate all there is to offer in the Slough. Pan, zoom and select features for more information.");
 }; 
